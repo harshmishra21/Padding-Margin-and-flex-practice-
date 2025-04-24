@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padding, Margin, and Flex Practice</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .practice-section {
+      margin-bottom: 40px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+    }
+
+    .box, .button, .paragraph, .flex-box {
+      margin-bottom: 20px;
+    }
+
+    .box {
+      background-color: lightblue;
+      padding: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+    }
+
+    .flex-layout {
+      display: flex;
+      gap: 10px;
+    }
+
+    .flex-box {
+      padding: 20px;
+      background-color: lightcoral;
+    }
+
+    .center-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      background: lightyellow;
+    }
+
+    .responsive-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .responsive-column {
+      flex: 1 1 200px;
+      padding: 20px;
+    }
+
+    .padding-box {
+      background-color: lightgreen;
+      padding: 20px;
+    }
+
+    .margin-box {
+      background-color: lightsalmon;
+      margin: 20px;
+    }
+
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .summary-table th, .summary-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .challenge-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background: #f1f1f1;
+    }
+
+    .challenge-inner {
+      margin: 50px;
+      padding: 30px;
+      background: darkslateblue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Padding, Margin, and Flex Practice</h1>
+
+<!-- Practice Set 1: Padding -->
+<section class="practice-section">
+  <h2>Practice 1: Padding</h2>
+  <div class="box">This box has 20px padding on all sides.</div>
+  <div style="padding: 10px 30px; background-color: lightblue;">Padding changed to 10px 30px</div>
+  <button class="button">Click Me</button>
+  <button style="padding: 15px 30px;">Click Me (More Padding)</button>
+  <div style="padding: 30px 10px 5px 0; background: peachpuff;">Top padding is more!</div>
+</section>
+
+<!-- Practice Set 2: Margin -->
+<section class="practice-section">
+  <h2>Practice 2: Margin</h2>
+  <div style="margin-bottom: 20px; background: lavender; padding: 10px;">First box</div>
+  <div style="background: thistle; padding: 10px;">Second box</div>
+  <div style="width: 200px; margin: auto; background: lightgreen; padding: 10px; border: 2px solid black;">Centered Box</div>
+  <p style="margin: 30px; background: mistyrose; padding: 10px;">Margins make room outside the element.</p>
+  <p style="margin: 30px 10px; background: mistyrose; padding: 10px;">Margin 30px 10px</p>
+</section>
+
+<!-- Practice Set 3: Flexbox -->
+<section class="practice-section">
+  <h2>Practice 3: Flexbox</h2>
+  <div class="flex-layout">
+    <div style="background: lightcoral; padding: 20px;">Box 1</div>
+    <div style="background: lightseagreen; padding: 20px;">Box 2</div>
+    <div style="background: lightsteelblue; padding: 20px;">Box 3</div>
+  </div>
+  <div class="center-flex">
+    <div style="background: tomato; padding: 20px;">Centered</div>
+  </div>
+  <div class="responsive-flex">
+    <div class="responsive-column" style="background: skyblue;">Column 1</div>
+    <div class="responsive-column" style="background: lightpink;">Column 2</div>
+    <div class="responsive-column" style="background: lightgray;">Column 3</div>
+  </div>
+</section>
+
+<!-- Visual Comparison -->
+<section class="practice-section">
+  <h2>Padding vs Margin – Side-by-Side Demo</h2>
+  <div class="container">
+    <div>
+      <div class="label">Padding</div>
+      <div class="padding-box">Inside spacing (padding)<br>pushes content inward</div>
+    </div>
+    <div>
+      <div class="label">Margin</div>
+      <div class="margin-box">Outside spacing (margin)<br>pushes elements away</div>
+    </div>
+  </div>
+</section>
+
+<!-- Padding + Margin Together -->
+<section class="practice-section">
+  <h2>Padding + Margin Together</h2>
+  <div style="padding: 30px; margin: 30px; background: lightcoral; color: white; width: 300px;">
+    Padding gives inner space. <br>
+    Margin gives outer space. <br><br>
+    🧠 Use Dev Tools to see the box model!
+  </div>
+</section>
+
+<!-- Flexbox Behavior -->
+<section class="practice-section">
+  <h2>Flexbox Behavior</h2>
+  <div style="display: flex; justify-content: space-between; background: #eee; padding: 10px;">
+    <div style="background: lightpink; padding: 20px;">Flex Child 1</div>
+    <div style="background: lightblue; padding: 20px;">Flex Child 2</div>
+    <div style="background: lightgreen; padding: 20px;">Flex Child 3</div>
+  </div>
+</section>
+
+<!-- Summary Table -->
+<section class="practice-section">
+  <h2>Key Concepts Summary Table</h2>
+  <table class="summary-table">
+    <tr>
+      <th>Property</th>
+      <th>Affects</th>
+      <th>Moves?</th>
+      <th>Acts On</th>
+      <th>Common Use</th>
+    </tr>
+    <tr>
+      <td>padding</td>
+      <td>Inner space</td>
+      <td>Inside the element</td>
+      <td>Content</td>
+      <td>Button sizing, spacing inside cards</td>
+    </tr>
+    <tr>
+      <td>margin</td>
+      <td>Outer space</td>
+      <td>Around the element</td>
+      <td>Surrounding area</td>
+      <td>Separating blocks, centering</td>
+    </tr>
+    <tr>
+      <td>display: flex</td>
+      <td>Layout</td>
+      <td>Item arrangement</td>
+      <td>Children of container</td>
+      <td>Responsive layouts</td>
+    </tr>
+  </table>
+</section>
+
+<!-- Bonus Challenge -->
+<section class="practice-section">
+  <h2>Bonus: Visual Challenge</h2>
+  <div class="challenge-box">
+    <div class="challenge-inner">
+      Challenge Box<br>
+      Has both padding & margin
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
